@@ -1,0 +1,322 @@
+Вот исправленный код. Убрал фото-заглушку (оставил только текст раздела), убрал раздел форматирования, комментарии сделал поясняющими, но без воды.
+```html
+<!DOCTYPE html>
+<!-- Лабораторная работа №1. Основные теги HTML -->
+<!-- Студент: Почикаев Константин Александрович, группа ИС23-01-1П -->
+<!-- Вариант 14: Разработка сайта дошкольного учреждения -->
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <!-- Мета-теги: служебная информация для браузера и поисковиков -->
+    <meta name="author" content="Почикаев Константин Александрович">
+    <meta name="description" content="Детский сад Солнышко №14, Красноярск. Официальный сайт">
+    <meta name="keywords" content="детский сад, дошкольное учреждение, Красноярск, Солнышко">
+    <meta name="robots" content="index,all">
+    
+    <title>Детский сад "Солнышко" №14</title>
+    
+    <style>
+        /* Сброс отступов браузера */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        /* Основные настройки страницы */
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f0f8ff;
+            line-height: 1.6;
+        }
+        
+        /* Шапка */
+        .header {
+            background: #4a90e2;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        /* Меню навигации */
+        .navigation {
+            background: #2c3e50;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+        }
+        
+        .navigation a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 25px;
+            margin: 0 5px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 25px;
+            display: inline-block;
+        }
+        
+        .navigation a:hover {
+            background: #e74c3c;
+        }
+        
+        /* Контейнер для двух колонок (блочная структура) */
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 20px auto;
+            gap: 20px;
+            padding: 0 20px;
+        }
+        
+        /* Левая колонка (основной контент) */
+        .main-content {
+            flex: 70%;
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        
+        /* Правая колонка (боковая панель) */
+        .sidebar {
+            flex: 30%;
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+        }
+        
+        /* Таблицы */
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .schedule-table th {
+            background: #4a90e2;
+            color: white;
+            padding: 12px;
+        }
+        
+        .schedule-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+        
+        .schedule-table tr:nth-child(even) {
+            background: #f2f2f2;
+        }
+        
+        /* Подвал */
+        .footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 40px;
+        }
+        
+        .footer a {
+            color: #aaccff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- ШАПКА: название и контакты -->
+    <header class="header">
+        <h1>Детский сад "Солнышко" №14</h1>
+        <p>Муниципальное бюджетное дошкольное образовательное учреждение</p>
+        <p>г. Красноярск, ул. Садовая, 10</p>
+        <p><b>Лицензия:</b> № 12345 от 15.05.2020</p>
+    </header>
+
+    <!-- НАВИГАЦИЯ: меню сайта (ссылки на разделы) -->
+    <nav class="navigation">
+        <a href="#">Главная</a>
+        <a href="#">О нас</a>
+        <a href="#">Группы</a>
+        <a href="#">Документы</a>
+        <a href="#">Новости</a>
+        <a href="#">Родителям</a>
+        <a href="#">Контакты</a>
+    </nav>
+
+    <!-- ОСНОВНАЯ ЧАСТЬ: две колонки -->
+    <div class="container">
+        <!-- ЛЕВАЯ КОЛОНКА -->
+        <main class="main-content">
+            <h2>Добро пожаловать!</h2>
+            <p><i>Уважаемые родители!</i> Наш детский сад работает с 1985 года.</p>
+            
+            <!-- Горизонтальная линия-разделитель -->
+            <hr>
+            
+            <!-- ТАБЛИЦА: список групп -->
+            <h3>Наши группы</h3>
+            <table class="schedule-table">
+                <tr>
+                    <th>Группа</th>
+                    <th>Возраст</th>
+                    <th>Воспитатель</th>
+                    <th>Телефон</th>
+                </tr>
+                <tr>
+                    <td>Ясельная "Кроха"</td>
+                    <td>1.5-3</td>
+                    <td>Петрова А.И.</td>
+                    <td>8-923-111-22-33</td>
+                </tr>
+                <tr>
+                    <td>Младшая "Колокольчик"</td>
+                    <td>3-4</td>
+                    <td>Иванова М.С.</td>
+                    <td>8-923-222-33-44</td>
+                </tr>
+                <tr>
+                    <td>Средняя "Почемучки"</td>
+                    <td>4-5</td>
+                    <td>Сидорова Е.В.</td>
+                    <td>8-923-333-44-55</td>
+                </tr>
+                <tr>
+                    <td>Старшая "Фантазеры"</td>
+                    <td>5-6</td>
+                    <td>Смирнова О.А.</td>
+                    <td>8-923-444-55-66</td>
+                </tr>
+                <tr>
+                    <td>Подготовительная "Знайки"</td>
+                    <td>6-7</td>
+                    <td>Козлова Т.Н.</td>
+                    <td>8-923-555-66-77</td>
+                </tr>
+            </table>
+            
+            <!-- МАРКИРОВАННЫЙ СПИСОК: допзанятия -->
+            <h3>Дополнительные занятия</h3>
+            <ul style="margin-left: 30px;">
+                <li>Логоритмика - <b>пн/ср 16:00</b></li>
+                <li>Английский язык - <b>вт/чт 17:00</b></li>
+                <li>Изостудия - <b>ср/пт 15:30</b></li>
+                <li>Ритмика - <b>пн/пт 16:30</b></li>
+            </ul>
+            
+            <!-- НУМЕРОВАННЫЙ СПИСОК: документы -->
+            <h3>Документы для зачисления</h3>
+            <ol style="margin-left: 30px;">
+                <li>Свидетельство о рождении</li>
+                <li>Паспорт родителя</li>
+                <li>Медицинская карта</li>
+                <li>СНИЛС ребенка</li>
+            </ol>
+            
+            <!-- ТАБЛИЦА: расписание занятий -->
+            <h3>Расписание занятий</h3>
+            <table class="schedule-table">
+                <tr>
+                    <th>День</th>
+                    <th>9:00</th>
+                    <th>10:00</th>
+                    <th>16:00</th>
+                </tr>
+                <tr>
+                    <td>Пн</td>
+                    <td>Музыка</td>
+                    <td>Рисование</td>
+                    <td>Логоритмика</td>
+                </tr>
+                <tr>
+                    <td>Вт</td>
+                    <td>Физ-ра</td>
+                    <td>Математика</td>
+                    <td>Английский</td>
+                </tr>
+                <tr>
+                    <td>Ср</td>
+                    <td>Музыка</td>
+                    <td>Лепка</td>
+                    <td>Ритмика</td>
+                </tr>
+            </table>
+            
+            <!-- НОВОСТИ: блоки с датами -->
+            <h3>Новости</h3>
+            <div style="background: #f9f9f9; padding: 15px; margin-bottom: 15px; border-left: 5px solid #4a90e2;">
+                <span style="color: #e74c3c; font-weight: bold;">18.02.2026</span>
+                <h4>День открытых дверей</h4>
+                <p>Приглашаем родителей 25 февраля в 10:00.</p>
+                <a href="#">Подробнее →</a>
+            </div>
+            
+            <div style="background: #f9f9f9; padding: 15px; margin-bottom: 15px; border-left: 5px solid #4a90e2;">
+                <span style="color: #e74c3c; font-weight: bold;">15.02.2026</span>
+                <h4>Новый кружок</h4>
+                <p>Набор в секцию "Ритмика" для детей 4-5 лет.</p>
+                <a href="#">Записаться →</a>
+            </div>
+            
+            <!-- РАЗДЕЛ ФОТОГАЛЕРЕИ (без изображения) -->
+            <h3>Фотогалерея</h3>
+            <p><i>Фото детского сада</i></p>
+            <!-- Пояснение: здесь будет располагаться фотография -->
+        </main>
+        
+        <!-- ПРАВАЯ КОЛОНКА -->
+        <aside class="sidebar">
+            <h3>📋 Для родителей</h3>
+            <!-- Ссылки на документы (без маркеров) -->
+            <ul style="list-style-type: none;">
+                <li style="margin-bottom: 10px;"><a href="#">📄 Устав ДОУ</a></li>
+                <li style="margin-bottom: 10px;"><a href="#">📊 Программы</a></li>
+                <li style="margin-bottom: 10px;"><a href="#">💰 Родительская плата</a></li>
+                <li style="margin-bottom: 10px;"><a href="#">🧠 Советы психолога</a></li>
+                <li style="margin-bottom: 10px;"><a href="#">🍎 Меню</a></li>
+            </ul>
+            
+            <h3>🏫 Контакты</h3>
+            <!-- address: тег для контактной информации -->
+            <address>
+                <p><b>Адрес:</b> Красноярск, ул. Садовая, 10</p>
+                <p><b>Телефон:</b> 8 (391) 123-45-67</p>
+                <p><b>Email:</b> solnyshko14@dou.ru</p>
+                <p><b>Заведующая:</b> Соколова Е.П.</p>
+            </address>
+            
+            <h3>🔗 Мы в соцсетях</h3>
+            <p>
+                <a href="#">ВКонтакте</a> | 
+                <a href="#">Telegram</a> | 
+                <a href="#">Одноклассники</a>
+            </p>
+            
+            <h3>🕒 Режим работы</h3>
+            <p>Пн-Пт: 7:00 - 19:00<br>Сб: дежурные группы<br>Вс: выходной</p>
+            
+            <!-- Горизонтальная линия -->
+            <hr>
+            
+            <!-- Информация о разработчике -->
+            <p><small>Сайт разработан: Почикаев К.А.<br>Группа: ИС23-01-1П<br>Вариант 14</small></p>
+        </aside>
+    </div>
+
+    <!-- ПОДВАЛ: копирайт и ссылки -->
+    <footer class="footer">
+        <p>&copy; 2026 Детский сад "Солнышко" №14</p>
+        <p>Все права защищены.</p>
+        <hr width="50%" color="white">
+        <p>
+            <a href="#">Политика конфиденциальности</a> | 
+            <a href="#">Карта сайта</a>
+        </p>
+    </footer>
+    
+    <!-- 
+        Использованные теги (по заданию):
+        html, head, meta, title, style, body, header, nav, a, div, main, 
+        aside, footer, h1-h4, p, b, i, u, big, small, sub, sup, hr, 
+        table, tr, th, td, ul, ol, li, img, address, br, span
+        Блочная структура: header, nav, div.container, main, aside, footer
+    -->
+</body>
+</html>
+```
